@@ -44,5 +44,5 @@ retryConnect.to({port: 3000, host: 'localhost', retryOptions: retryOptions }, fu
 
 ## Running the tests:
 
-```npm install```
+```npm install```    
 ```npm test```
