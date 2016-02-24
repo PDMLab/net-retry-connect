@@ -1,0 +1,31 @@
+{
+  "name": "net-retry-connect",
+  "version": "0.1.0",
+  "description": "Attempt to connect to net Sockets using retry patterns",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test/test.js -t 4000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PDMLab/net-retry-connect.git"
+  },
+  "keywords": [
+    "net",
+    "sockets",
+    "retry",
+    "connect"
+  ],
+  "author": "Alexander Zeitler <alexander.zeitler@pdmlab.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/PDMLab/net-retry-connect/issues"
+  },
+  "homepage": "https://github.com/PDMLab/net-retry-connect#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "retry": "^0.9.0"
+  }
+}
