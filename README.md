@@ -13,9 +13,9 @@ Attempt to connect to net Sockets using retry patterns.
 ### retryConnect.to(options, callback)
 
 ```options``` provides this options:
-* port: the TCP port
-* host: optional, defaults to ```'localhost'```
-* retryOptions, see retry options for [retry.operation](https://github.com/tim-kos/node-retry#retryoperationoptions)
+* ```port```: the TCP port
+* ```host```: optional, defaults to ```'localhost'```
+* ```retryOptions```, see retry options for [retry.operation](https://github.com/tim-kos/node-retry#retryoperationoptions)
 
 ```callback``` returns a client object if connection has been successful. Otherwise it returns the error.
 
@@ -44,5 +44,7 @@ retryConnect.to({port: 3000, host: 'localhost', retryOptions: retryOptions }, fu
 
 ## Running the tests:
 
-```npm install```    
-```npm test```
+```
+npm install   
+npm test
+```
