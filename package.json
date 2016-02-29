@@ -1,6 +1,6 @@
 {
   "name": "net-retry-connect",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Attempt to connect to net Sockets using retry patterns",
   "main": "index.js",
   "scripts": {

@@ -15,7 +15,7 @@ Attempt to connect to net Sockets using retry patterns.
 ```options``` provides this options:
 * ```port```: the TCP port
 * ```host```: optional, defaults to ```'localhost'```
-* ```retryOptions```, see retry options for [retry.operation](https://github.com/tim-kos/node-retry#retryoperationoptions)
+* ```retryOptions```, optional, see retry options for [retry.operation](https://github.com/tim-kos/node-retry#retryoperationoptions)
 
 ```callback``` returns a client object if connection has been successful. Otherwise it returns the error.
 

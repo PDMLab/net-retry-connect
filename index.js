@@ -14,15 +14,18 @@ Connection.prototype.to = function(options, cb) {
     var operation = retry.operation(retryOptions);
     var cbCalled = false;
 
-    client.on('error', function(err) {
-        if(!operation.retry(err)) {
+    client.on('error', handleError);
+
+    function handleError(err) {
+        if (!operation.retry(err)) {
             cb(err, null)
         }
-    });
+    }
 
     operation.attempt(function () {
         client.connect(port, host, function(){
             if(!cbCalled) {
+                client.removeListener('error', handleError);
                 cb(null, client);
                 cbCalled = true;
             }

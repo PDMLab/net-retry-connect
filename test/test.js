@@ -27,6 +27,16 @@ describe('net-retry-connect', function () {
             });
 
         });
+
+        it('client should have no listeners attached', function(done) {
+            setTimeout(function () {
+                createServer();
+            }, 3000);
+            retryConnect.to({port: 3000, host: 'localhost'}, function (error, client) {
+                assert.equal(client.listeners('error').length, 0);
+                done();
+            });
+        })
     });
 
     describe('When connecting to a server that takes 3 seconds to be up but should wait only 2 seconds', function () {
